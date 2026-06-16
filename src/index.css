@@ -2,7 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tamlk-teal: #0D7C7C;
+  --tamlk-teal-mid: #0F9A9A;
+  --tamlk-teal-dark: #0A6464;
+  --tamlk-teal-light: #E6F4F4;
+  --tamlk-sand: #E8DCC4;
+  --tamlk-cream: #FAF7F2;
+  --tamlk-surface: #FFFFFF;
+  --tamlk-border: #E5E0D8;
+  --tamlk-text: #1A1A1A;
+  --tamlk-muted: #78716C;
+  --tamlk-success: #16A34A;
+  --tamlk-warning: #D97706;
+  --tamlk-alert: #C0504D;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--tamlk-cream);
+  color: var(--tamlk-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+[lang='ar'] body,
+[lang='ar'] {
+  font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@layer components {
+  .tamlk-card {
+    @apply bg-white rounded-2xl border border-[#E5E0D8] shadow-sm;
+  }
+
+  .tamlk-section-title {
+    @apply text-lg font-semibold text-[#0F9A9A];
+  }
+
+  .tamlk-table-head {
+    @apply bg-[#0A6464] text-white;
+  }
+
+  .tamlk-btn-primary {
+    @apply bg-[#0D7C7C] text-white rounded-xl font-medium hover:bg-[#0F9A9A] transition-colors shadow-sm;
+  }
 }
